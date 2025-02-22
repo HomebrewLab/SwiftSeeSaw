@@ -12,10 +12,10 @@ let package = Package(
   products: [
     // Products define the executables and libraries a package produces, making them visible to
     // other packages.
-    .executable(
-      name: "SeeSawQuadRotary",
-      targets: ["SeeSawQuadRotary"]
-    ),
+    // .executable(
+    //   name: "SeeSawQuadRotary",
+    //   targets: ["SeeSawQuadRotary"]
+    // ),
     .library(
       name: "SeeSaw",
       targets: ["SeeSaw"]
@@ -69,24 +69,24 @@ let package = Package(
         ),
       ]
     ),
-    .executableTarget(
-      name: "SeeSawQuadRotary",
-      dependencies: [
-        "SeeSaw",
-        "QuadRotary",
-        .product(name: "SwiftIO", package: "SwiftIO", condition: .when(platforms: [.linux])),
-        .product(
-          name: "AsyncSwiftIO",
-          package: "LinuxHalSwiftIO",
-          condition: .when(platforms: [.linux])
-        ),
-        .product(
-          name: "LinuxHalSwiftIO",
-          package: "LinuxHalSwiftIO",
-          condition: .when(platforms: [.linux])
-        ),
-      ],
-      path: "Examples/SeeSawQuadRotary"
-    ),
+    // .executableTarget(
+    //   name: "SeeSawQuadRotary",
+    //   dependencies: [
+    //     "SeeSaw",
+    //     "QuadRotary",
+    //     .product(name: "SwiftIO", package: "SwiftIO", condition: .when(platforms: [.linux])),
+    //     .product(
+    //       name: "AsyncSwiftIO",
+    //       package: "LinuxHalSwiftIO",
+    //       condition: .when(platforms: [.linux])
+    //     ),
+    //     .product(
+    //       name: "LinuxHalSwiftIO",
+    //       package: "LinuxHalSwiftIO",
+    //       condition: .when(platforms: [.linux])
+    //     ),
+    //   ],
+    //   path: "Examples/SeeSawQuadRotary"
+    // ),
   ]
 )

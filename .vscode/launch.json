@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:SwiftSeeSaw}",
+            "name": "Debug SeeSawQuadRotary",
+            "program": "${workspaceFolder:SwiftSeeSaw}/.build/debug/SeeSawQuadRotary",
+            "preLaunchTask": "swift: Build Debug SeeSawQuadRotary"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:SwiftSeeSaw}",
+            "name": "Release SeeSawQuadRotary",
+            "program": "${workspaceFolder:SwiftSeeSaw}/.build/release/SeeSawQuadRotary",
+            "preLaunchTask": "swift: Build Release SeeSawQuadRotary"
+        }
+    ]
+}
